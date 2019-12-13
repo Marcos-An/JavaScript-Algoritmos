@@ -36,6 +36,7 @@ function linkedList() {
     }
     return head
   }
+
   const selectionPerson = () => {
     let node = head
     let count = 0

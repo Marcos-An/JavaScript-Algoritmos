@@ -3,7 +3,7 @@ function ListaLigada() {
   let tamanho = 0
 
   const Print = () => {
-    console.log(cabeca)
+    return cabeca
   }
 
   const Node = (value) => {
@@ -73,11 +73,6 @@ Lista = ListaLigada()
 Lista.add(6)
 Lista.add(5)
 Lista.add(2)
-Lista.add(3)
-Lista.add(9)
-Lista.add(16)
-Lista.add(4)
-Lista.add(1)
 console.log(Lista.Print());
 console.log(Lista.order());
 
