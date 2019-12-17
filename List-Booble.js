@@ -75,6 +75,3 @@ Lista.add(5)
 Lista.add(2)
 console.log(Lista.Print());
 console.log(Lista.order());
-
-
-
