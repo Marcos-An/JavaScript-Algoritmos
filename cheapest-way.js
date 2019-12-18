@@ -72,6 +72,6 @@ console.log(grafo);
 console.log(" ");
 List.AddWay(grafo)
 console.log(" ");
-List.CheckWay('B', 'D', grafo)
+List.CheckWay('A', 'D', grafo)
 
 
