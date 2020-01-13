@@ -2,4 +2,4 @@
 Um repositório com estudos pessoais sobre JavaScript
 
 Aqui você encontra coisas como 
--Tabela Hash
+\n -Tabela Hash
