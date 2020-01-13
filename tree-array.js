@@ -39,4 +39,4 @@ function search(tree, value) {
 
 sort(tree)
 console.log(tree);
-console.log(search(tree, 90))
+console.log(search(tree, 25))

@@ -1,6 +1,5 @@
-function doubleLinkedList() {
+function linkedList() {
   var head
-  var tail
   var length = 0
 
   const print = () => {
@@ -17,8 +16,6 @@ function doubleLinkedList() {
   const Node = (valor) => {
     var value = valor
     var next = null
-    var prev = null
-
     return {
       value,
       next
@@ -39,13 +36,28 @@ function doubleLinkedList() {
     return node
   }
 
-  const insert = (position, e) => {
+  const insert = (position, e) => { // 0 eu
+    if (position > -1 && position < length) {
+      var node = Node(e) //novoNode
+      var current = head //joao 
+      var previous
+      var count = 0
 
-  }
-
-
-  const removeAt = (position) => {
-
+      if (position === 0) {
+        node.next = current
+        head = node
+      } else {
+        while (count < position) {
+          previous = current
+          current = current.next
+          count++
+        }
+        node.next = current
+        previous.next = node
+      }
+      length++
+      return true
+    } else false
   }
 
   const remove = (e) => {
@@ -53,6 +65,26 @@ function doubleLinkedList() {
     return removeAt(index)
   }
 
+  const removeAt = (position) => {
+    if (position > -1 && position < length) {
+      var node = head
+      var previous
+      var count = 0
+
+      if (position == 0) {
+        head = node.next
+        length--
+      }
+      while (count < position) {
+        previous = node
+        node = node.next
+        count++
+      }
+      previous.next = node.next
+      length--
+      return node.valor
+    } else return null
+  }
   const isEmpety = () => {
     if (length === 0) {
       return console.log('A lista está vazia')
@@ -83,5 +115,14 @@ function doubleLinkedList() {
   }
 }
 
-const List = doubleLinkedList()
+const List = linkedList()
 
+List.isEmpety()
+List.Add('Joao')
+List.Add('José')
+List.Add('Maria')
+List.Add('Renato')
+List.Add('André')
+List.insert(2, 'Miriam')
+List.print()
+List.isEmpety()
